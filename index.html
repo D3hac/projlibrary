@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=”viewport” content=”width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0″ />
+        <title>Public Library</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+        <nav>
+            <a href="index.html"><img src="Imagens/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="search.html">SEARCH</a></li>
+                    <li><a href="contactus.html">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Discover, Connect, and Immerse</h1>
+            <p>Welcome to Publibrary, where the magic of literature comes to life. </p>
+            <a href="aboutus.html" class="hero-btn">Visit Us To Know More</a>
+        </div>
+        </section>
+
+        <!------Events----->
+
+        <section class="events">
+            <h1>Events</h1>
+            <p>Chapter by Chapter: A Tapestry of Engaging Events</p>
+            <div class="carousel">
+                <button class="carousel_button carousel_button--left is hidden">
+                    <img class="carousel_img" src="Imagens/left.png" alt="">
+                </button>
+                <div class="carousel_track-container">
+                    <ul class="carousel_track">
+                        <li class="carousel_slide current-slide">
+                            <img class="carousel_images" src="Imagens/1.webp" alt="">
+                            <div class="text">Book Festival</div>
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_images" src="Imagens/2.jpg" alt="">
+                            <div class="text">Book Club</div>
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_images" src="Imagens/3.jpg" alt="">
+                            <div class="text">Read To Children</div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel_button carousel_button--right">
+                    <img class="carousel_img" src="Imagens/right.png" alt="">
+                    
+                </button>
+                <div class="carousel_nav">
+                    <button class="carousel_indicator current-slide"></button>
+                    <button class="carousel_indicator"></button>
+                    <button class="carousel_indicator"></button>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="carousel.js"></script>
+        <section>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            max-width: 300px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .card-content {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" id="card1">
+    <div class="card-header">
+        <h3>Book Festival</h3>
+        <button onclick="toggleContent('card1')">More</button>
+        <button onclick="navigateToPage('schedule.html')">See schedule</button>
+    </div>
+    <div class="card-content">
+        <p>Step into a world of literary wonder at our Book Festival, where imagination knows no bounds 
+            and stories come to life. Dive into a celebration of words, ideas, and the magic that unfolds
+             between the pages. Join fellow book enthusiasts, explore a diverse array of authors and genres, 
+             and revel in the joy of a shared passion for literature. From captivating discussions to
+              exciting book signings, our festival is a celebration of the written word that promises
+               inspiration and discovery for every book lover.</p>
+    </div>
+</div>
+
+<div class="card" id="card2">
+    <div class="card-header">
+        <h3>Book Club</h3>
+        <button onclick="toggleContent('card2')">More</button>
+        <button onclick="navigateToPage('schedule.html')">See schedule</button>
+    </div>
+    <div class="card-content">
+        <p> Join our book club, where pages turn into friendships and stories create lasting bonds. 
+            Immerse yourself in the joy of shared stories, lively discussions, and the magic of
+             discovering new worlds together. Whether you're a seasoned reader or just starting your 
+             literary journey, our book club is a welcoming space for all who cherish the love of a
+              good book and the joy of sharing that love with others.</p>
+    </div>
+</div>
+
+<div class="card" id="card3">
+    <div class="card-header">
+        <h3>Read to Children</h3>
+        <button onclick="toggleContent('card3')">More</button>
+        <button onclick="navigateToPage('schedule.html')">See schedule</button>
+    </div>
+    <div class="card-content">
+        <p>Embark on a magical journey with our Children's Reading Adventure! Immerse young minds in the 
+            enchanting world of stories, where each book becomes a gateway to imagination and discovery.
+             Join us for captivating tales, colorful illustrations, and the joy of shared moments between 
+             storytellers and little listeners. Fostering a love for reading from an early age, our reading
+              sessions are designed to spark curiosity, inspire creativity, and create cherished memories 
+              that will last a lifetime. Let's embark on a reading adventure together, where every story is 
+              a stepping stone to a brighter, more imaginative future.</p>
+    </div>
+</div>
+
+<div class="card" id="card4">
+    <div class="card-header">
+        <h3>Old Tommes</h3>
+        <button onclick="toggleContent('card4')">More</button>
+        <button onclick="navigateToPage('schedule.html')">See schedule</button>
+    </div>
+    <div class="card-content">
+        <p>EIndulge your passion for the rare and timeless at our Vintage Book Collectors Now events. 
+            Join fellow enthusiasts in a celebration of literary history, where the allure of vintage books
+             beckons collectors and connoisseurs alike. Immerse yourself in the charm of well-preserved classics, 
+             explore hidden treasures, and connect with fellow collectors who share your love for the written word
+              of bygone eras. From exclusive book fairs to expert talks on preservation, our events are curated to
+               transport you into the enchanting world of vintage book collecting. Unearth literary gems, share stories,
+                and be part of a community dedicated to preserving the legacy of extraordinary books.</p>
+    </div>
+</div>
+
+<div class="card" id="card5">
+    <div class="card-header">
+        <h3>More events</h3>
+        <button onclick="toggleContent('card5')">More</button>
+        <button onclick="navigateToPage('schedule.html')">See schedule</button>
+    </div>
+    <div class="card-content">
+        <p>Discover a tapestry of literary events that cater to every reader's passion! Our diverse lineup 
+            of literary gatherings promises something for everyone. From author meet-and-greets to thought-provoking
+             panel discussions, book signings, and interactive workshops, our events are designed to celebrate the 
+             written word in all its forms. Join us for a journey through the literary landscape, where each event 
+             is a unique opportunity to connect with fellow enthusiasts, explore new perspectives, and celebrate the
+              joy of storytelling. Embrace the magic of literature with our vibrant community of readers and writers,
+               and let the pages of our events unfold new adventures for every book lover.</p>
+    </div>
+</div>
+
+
+<script>
+    function toggleContent(cardId) {
+        var content = document.getElementById(cardId).getElementsByClassName('card-content')[0];
+        content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+    }
+
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
+</script>
+
+</body>
+</html>
+
+        </section>
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque aliquet turpis nulla, eleifend faucibus est <br>solicitudin ut.
+                 Maecenas ut venenatis ex, et dapibus purus.
+            </p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+
+        </section>
+    </body>
+</html>

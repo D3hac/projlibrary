@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=”viewport” content=”width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0″ />
+        <title>Public Library</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sub-header2">
+        <nav>
+            <a href="index.html"><img src="Imagens/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="search.html">SEARCH</a></li>
+                    <li><a href="contactus.html">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Book Search</h1>
+        </div>
+    </section>
+
+        <!------search content------>
+        <div id="search-container">
+            <h2 style="color: #e9c1a7;">Book Search</h2>
+            <input type="text" id="search-input" placeholder="Enter book title or author">
+            <button id="search-button" onclick="searchBooks()">Search</button>
+        </div>
+        
+        <div id="search-results">
+            <!-- Search results will be displayed here -->
+        </div>
+        
+        <script>
+            function searchBooks() {
+                //gff Replace this with actual search functionality using JavaScript or connect to a server/database
+                var searchInput = document.getElementById('search-input').value;
+                var searchResultsContainer = document.getElementById('search-results');
+        
+                // Sample results (replace with your actual search logic)
+                var results = [
+                    { title: 'Book 1', author: 'Author 1' },
+                    { title: 'Book 2', author: 'Author 2' },
+                    { title: 'Book 3', author: 'Author 3' }
+                    // Add more results as needed
+                ];
+        
+                // Clear previous results
+                searchResultsContainer.innerHTML = '';
+        
+                // Display search results
+                results.forEach(function (result) {
+                    var resultElement = document.createElement('div');
+                    resultElement.classList.add('book-result');
+                    resultElement.innerHTML = '<div class="book-info"><strong>Title:</strong> ' + result.title + '<br><strong>Author:</strong> ' + result.author + '</div>';
+                    searchResultsContainer.appendChild(resultElement);
+                });
+            }
+        </script>
+
+    </section>
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est <br>solicitudin ut.
+             Maecenas ut venenatis ex, et dapibus purus.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+
+
+    </body>
+</html>
