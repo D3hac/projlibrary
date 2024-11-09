@@ -1,6 +1,3 @@
-Claro! Aqui está a versão em inglês e com apenas o seu nome:
-
----
 
 # Online Library
 
