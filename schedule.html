@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=”viewport” content=”width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0″ />
+        <title>Public Library</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Imagens/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="search.html">SEARCH</a></li>
+                    <li><a href="contactus.html">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Schedule</h1>
+        </div>
+    </section>
+
+        <!------about us content------>
+        <section>
+            
+  <div id="calendar-container">
+    <h2 class="month">January 2024</h2>
+    
+    <table id="calendar-table">
+      <thead>
+        <tr>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>30</td>
+          <td>31</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const calendarBody = document.getElementById("calendar-body");
+      const currentMonthElement = document.getElementById("current-month");
+
+      function generateCalendar(year, month) {
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDay = new Date(year, month + 1, 0).getDate();
+        const daysInWeek = 7;
+
+        let calendarHTML = "";
+        let dayCounter = 1;
+
+        for (let i = 0; i < 6; i++) {
+          calendarHTML += "<tr>";
+          for (let j = 0; j < daysInWeek; j++) {
+            if (i === 0 && j < firstDay) {
+              calendarHTML += "<td></td>";
+            } else if (dayCounter <= lastDay) {
+              calendarHTML += `<td onclick="alert('Clicked on ${dayCounter}');">${dayCounter}</td>`;
+              dayCounter++;
+            } else {
+              calendarHTML += "<td></td>";
+            }
+          }
+          calendarHTML += "</tr>";
+        }
+
+        calendarBody.innerHTML = calendarHTML;
+      }
+
+      function updateCalendarHeader(year, month) {
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        currentMonthElement.textContent = `${monthNames[month]} ${year}`;
+      }
+
+      // Initial rendering for January 2024
+      generateCalendar(2024, 0);
+      updateCalendarHeader(2024, 0);
+    });
+  </script>
+
+        </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque aliquet turpis nulla, eleifend faucibus est <br>solicitudin ut.
+             Maecenas ut venenatis ex, et dapibus purus.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+
+
+
+    </body>
+</html>
